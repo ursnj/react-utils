@@ -4,15 +4,15 @@ import { CONSTANTS } from '../constants';
 
 const useDarkMode = () => {
   const { getItem, setItem } = useLocalStorage();
-  const [mode, setMode] = useState(getItem(CONSTANTS.MODE) || CONSTANTS.LIGHT);
+  const [theme, setTheme] = useState(getItem(CONSTANTS.THEME) || CONSTANTS.LIGHT);
 
-  const toogleMode = () => {
-    const newMode = mode === CONSTANTS.DARK ? CONSTANTS.LIGHT : CONSTANTS.DARK;
-    setMode(newMode);
-    setItem(CONSTANTS.MODE, newMode);
+  const toogleTheme = () => {
+    const newTheme = theme === CONSTANTS.DARK ? CONSTANTS.LIGHT : CONSTANTS.DARK;
+    setTheme(newTheme);
+    setItem(CONSTANTS.THEME, newTheme);
   }
 
-  return { mode, toogleMode };
+  return { theme, toogleTheme };
 };
 
 export default useDarkMode;

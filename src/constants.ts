@@ -1,5 +1,5 @@
 export const CONSTANTS = {
-  MODE: 'MODE',
+  THEME: 'THEME',
   DARK: 'dark',
   LIGHT: 'light'
 }
